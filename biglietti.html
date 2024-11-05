@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acquista Biglietti</title>
+</head>
+<body>
+    <form action="gestioneacquisto.php" method="get">
+        <label>Nome</label>
+        <input type="text" name="nome" id="nome" required><br>
+        
+        <label>Cognome</label>
+        <input type="text" name="cognome" id="cognome" required><br>
+        
+        <label>Codice fiscale</label>
+        <input type="text" name="cf" id="cf" required><br>
+        
+        <label>Settore</label>
+        <select name="settore" id="settore">
+            <option value="curva">Curva</option>
+            <option value="tribunaCentrale">Tribuna centrale</option>
+            <option value="tribunaOnore">Tribuna d'onore</option>
+        </select><br>
+        
+        <label>Codice sconto</label>
+        <input type="text" name="codiceSconto" id="codiceSconto"><br>
+        
+        <input type="radio" name="tipologia" value="bigliettoUnico" checked> Biglietto unico
+        <input type="radio" name="tipologia" value="piuBiglietti"> Più biglietti<br>
+        
+        <div id="divBigliettiInPiu" style="display: none;">
+            <label>Codice fiscale aggiuntivo</label>
+            <input type="text" name="cfAggiuntivo" class="cfAggiuntivo"><br>
+            
+            <label>Numero biglietti</label>
+            <input type="number" name="numBiglietti" id="numBiglietti" value="1" min="1" max="4"><br>
+            
+            <button type="button" id="aggiungi">Aggiungi</button>
+            <button type="button" id="rimuovi">Rimuovi</button>
+        </div>
+        
+        <button type="submit">Invia</button>
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>
